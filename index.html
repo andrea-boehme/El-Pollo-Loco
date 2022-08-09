@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="classes/drawable-object.class.js"> </script>
+    <script src="classes/movable-object.class.js"> </script>
+    <script src="classes/status-bar.class.js"> </script>
+    <script src="classes/bottle-bar.class.js"> </script>
+    <script src="classes/coin-bar.class.js"> </script>
+    <script src="classes/endboss-bar.class.js"> </script>
+    <script src="classes/collectable-bottles.class.js"> </script>
+    <script src="classes/coin.class.js"> </script>
+    <script src="classes/world.class.js"> </script>
+    <script src="classes/character.class.js"> </script>
+    <script src="classes/chicken.class.js"> </script>
+    <script src="classes/cloud.class.js"> </script>
+    <script src="classes/background-objects.class.js"> </script>
+    <script src="classes/keyboard.class.js"> </script>
+    <script src="classes/level.class.js"> </script>
+    <script src="classes/endboss.class.js"> </script>
+    <script src="classes/throwable-object.class.js"></script>
+    <script src="levels/level1.js"> </script>
+    <script src="js/game.js"> </script>
+    <title>EL POLLO LOCO</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  
+</head>
+
+<body>
+    <div id="start" class="startscreen">
+        <img class="startimg" src="img/9.Intro _ Outro Image/Start Screen/Opción 1.png">
+        <img class="control" src="img/control.jpeg">
+        <img class="start" src="img/start.jpeg" onclick="startGame()">
+    </div>
+
+    <div id="win" class="startscreen d-none">
+        <img class="startimg" src="img/9.Intro _ Outro Image/_Game over_ screen/3.Game over.png">
+        <h1>Congratulations, you won!</h1>
+        <button class="btn" onclick="restart()">New Game</button>
+    </div>
+
+    <div id="gameOver" class="startscreen d-none">
+        <img class="startimg" src="img/9.Intro _ Outro Image/_Game over_ screen/3.Game over.png">
+        <h1>Sorry, you lost...</h1>
+        <button class="btn" onclick="restart()">New Game</button>
+    </div>
+    <div id="game" class="game d-none">
+        <img title="full screen" class="fullscreen" onclick="fullscreen()" src="img/icon/full-screen-48.png">
+        <canvas id="canvas" width="720" height="480"></canvas>
+        <img title="back" class="undobtn" onclick="restart()" src="img/icon/undo.png">
+        <img title="sound" class="mute" id="mute" onclick="stopMusic()" src="img/icon/music.png">
+        <div class="control-align">
+            <img class="control-game" src="img/control.jpeg">
+        </div>
+    </div>
+    
+</body>
+</html>

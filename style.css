@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'zabars';
+    src: url('fonts/zabars.ttf') format('truetype'); 
+  }  
+  
+  body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    background-image: url('img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'zabars', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+canvas {
+    background-color: black;
+    display: block;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.startscreen {
+    height: 98vh;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.startimg {
+    margin-bottom: 16px;
+    width: 50%;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.control {
+    width: 30%;
+}
+
+.start {
+    margin-top: 20px;
+    width: 15%;
+}
+
+.btn-d {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    border-width: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: rgb(201, 134, 9);
+}
+
+.control-game {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.control-align {
+    text-align: center;
+}
+
+.controlelement {
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controlimg {
+    margin-left: 8px;
+    height: 50px;
+    width: 50px ;
+    padding: 10px;
+}
+
+.spacecontrolimg {
+    margin-left: 8px;
+    height: 50px;
+    padding: 10px;
+}
+
+.undobtn {
+    height: 50px;
+    margin: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 120px;
+    cursor: pointer;
+}
+
+.mute {
+    height: 50px;
+    margin: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 120px;
+    cursor: pointer;
+}
+
+.fullscreen {
+    height: 50px;
+    margin: 8px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 10px;
+    margin: 24px;
+    width: 200px;
+    height: 75px;
+    font-size: 30px;
+    font-weight: bolder;
+    border: 2px solid #555555;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(201, 134, 9);
+    font-family: 'zabars', Arial, Helvetica, sans-serif;
+  }
+  
+.btn:hover {
+    background-color: rgb(175, 134, 58);
+  }
+
+.opacity {
+    opacity: 0.5;
+}
+
+
+@media(max-width: 1000px) {
+
+    .startimg {
+        width: 80%;
+    }
+
+    .control {
+        width: 70%;
+    }
+
+    .start {
+        width: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+    canvas{
+        width: 100%;
+    }
+
+    .undobtn {
+        height: 30px;
+    }
+    
+    .mute {
+        height: 30px;
+    }
+    
+    .fullscreen {
+        height: 30px;
+    }
+}
+
+
+@media only screen and (max-height: 480px) {
+    
+    canvas{
+        height: 100vh;
+    }
+}
+
+
