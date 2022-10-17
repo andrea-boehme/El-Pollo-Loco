@@ -1,5 +1,5 @@
 class DrawableObject {
-
+    
     img;
     imageCache = {}; //JSON
     currentImage = 0;
@@ -43,10 +43,17 @@ class DrawableObject {
      * 
      */
     drawFrame(ctx) { 
-        if (this instanceof Character || this instanceof Chicken || this instanceof Collectable) { 
+        if (this.instanceofElement()) { 
             ctx.beginPath();
+            ctx.lineWidth = '5';
+            ctx.strokeStyle = 'transparent';
+            ctx.rect(this.x, this.y, this.width, this.height);
             ctx.stroke();
         }
+    }
+
+    instanceofElement() {
+        return this instanceof Character || this instanceof Chicken || this instanceof BabyChicken || this instanceof Bottle || this instanceof Coin || this instanceof Endboss
     }
 
 }

@@ -6,7 +6,7 @@ class EndbossBar extends DrawableObject{
         'img/7.Marcadores/Barra/Marcador vida/Naranja/2.png',
         'img/7.Marcadores/Barra/Marcador vida/Naranja/3.png',
         'img/7.Marcadores/Barra/Marcador vida/Naranja/4.png',
-        'img/7.Marcadores/Barra/Marcador vida/Naranja/5.png'
+        'img/7.Marcadores/Barra/Marcador vida/Naranja/5.png',
     ]
 
     energy = 25;
@@ -18,7 +18,7 @@ class EndbossBar extends DrawableObject{
         this.y = 400;
         this.width = 250;
         this.height = 80; 
-        this.updateEndbossBar(25)
+        this.updateEndbossBar(25);
     }
 
     /**

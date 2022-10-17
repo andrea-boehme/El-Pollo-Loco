@@ -91,84 +91,48 @@ function fullscreen() {
     canvas.requestFullscreen()
 }
 
-
 /**
- * defines keyboard buttons; press turns variables to true
- * 
+ * Check if the user presses a botton on the keyboard and update Keyboard object:
  */
-window.addEventListener("keydown", (e) => {
-    if(e.keyCode == 39) {
-        keyboard.RIGHT = true;
-    }
+ window.addEventListener('keydown', (e) => {
+  switch (e.key) {
+      case "ArrowLeft":
+          keyboard.LEFT = true;
+          break;
+      case "ArrowRight":
+          keyboard.RIGHT = true;
+          break;
+      case "ArrowUp":
+          keyboard.UP = true;
+          break;
+      case "d":
+          keyboard.D = true;
+          break;
+      case " ":
+          keyboard.SPACE = true;
+          break;
+  }
+});
 
-    if(e.keyCode == 39) {
-        keyboard.RIGHT = true;
-    }
-
-    if(e.keyCode == 37) {
-        keyboard.LEFT = true;
-    }
-
-    if(e.keyCode == 38) {
-        keyboard.UP = true;
-    }
-
-    if(e.keyCode == 40) {
-        keyboard.DOWN = true;
-    }
-
-    if(e.keyCode == 32) {
-        keyboard.SPACE = true;
-    }
-
-    if(e.keyCode == 68) {
-        keyboard.D = true;
-    }
-
-})
-
-/**
- * defines keyboard buttons; release turns variables to false
- * 
- */
-window.addEventListener("keyup", (e) => {
-    if(e.keyCode == 39) {
-        keyboard.RIGHT = false;
-    }
-
-    if(e.keyCode == 39) {
-        keyboard.RIGHT = false;
-    }
-
-    if(e.keyCode == 37) {
-        keyboard.LEFT = false;
-    }
-
-    if(e.keyCode == 38) {
-        keyboard.UP = false;
-    }
-
-    if(e.keyCode == 40) {
-        keyboard.DOWN = false;
-    }
-
-    if(e.keyCode == 32) {
-        keyboard.SPACE = false;
-    }
-
-    if(e.keyCode == 68) {
-        keyboard.D = false;
-    }
-
-})
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener('keyup', (e) => {
+  switch (e.key) {
+      case "ArrowLeft":
+          keyboard.LEFT = false;
+          break;
+      case "ArrowRight":
+          keyboard.RIGHT = false;
+          break;
+      case "ArrowUp":
+          keyboard.UP = false;
+          break;
+      case "ArrowDown":
+          keyboard.D = false;
+          break;
+      case " ":
+          keyboard.SPACE = false;
+          break;
+      case "d":
+          keyboard.D = false;
+          break;
+  }
+});
