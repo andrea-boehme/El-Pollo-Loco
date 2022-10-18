@@ -279,6 +279,10 @@ button {
     .hide-mobile {
         display: none !important;
     }
+
+    .fullscreen {
+        display: none !important;
+    }
 }
 
 .btn-mobile {

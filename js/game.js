@@ -12,6 +12,7 @@ gameAudio = new Audio('audio/music.mp3')
 function init() {
     canvas = document.getElementById('canvas'); // returns an Element object representing the element whose id property matches the specified string
     world = new World(canvas, keyboard);
+    mobileKeyboard();
 }
 
 /**
@@ -88,7 +89,7 @@ function stopMusic() {
  * 
  */
 function fullscreen() {
-    canvas.requestFullscreen()
+    canvas.requestFullscreen();
 }
 
 /**
@@ -136,3 +137,69 @@ window.addEventListener('keyup', (e) => {
           break;
   }
 });
+
+/**
+ * This function check the mobile control buttons
+ */
+ function mobileKeyboard() {
+  upButton();
+  throwButton();
+  leftButton();
+  rightButton();
+}
+
+/**
+* the up-button is pressed or released 
+*/
+function upButton() {
+  document.getElementById('up-btn').addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      keyboard.SPACE = true;
+  });
+  document.getElementById('up-btn').addEventListener('touchend', (e) => {
+      e.preventDefault();
+      keyboard.SPACE = false;
+  });
+}
+
+/**
+*the throw-button is pressed or released 
+*/
+function throwButton() {
+  document.getElementById('throw-btn').addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      keyboard.D = true;
+  });
+  document.getElementById('throw-btn').addEventListener('touchend', (e) => {
+      e.preventDefault();
+      keyboard.D = false;
+  });
+}
+
+/**
+* the left-button is pressed or released
+*/
+function leftButton() {
+  document.getElementById('left-btn').addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      keyboard.LEFT = true;
+  });
+  document.getElementById('left-btn').addEventListener('touchend', (e) => {
+      e.preventDefault();
+      keyboard.LEFT = false;
+  });
+}
+
+/**
+* the right-button is pressed or released
+*/
+function rightButton() {
+  document.getElementById('right-btn').addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      keyboard.RIGHT = true;
+  });
+  document.getElementById('right-btn').addEventListener('touchend', (e) => {
+      e.preventDefault();
+      keyboard.RIGHT = false;
+  });
+}
